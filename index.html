@@ -67,6 +67,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!--Rellax-->
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+
     <!-- Social Media Meta Tags -->
     <meta
       property="og:title"
@@ -165,13 +168,10 @@
                 all walks of people.
               </p>
             </div>
-            <a
-              class="button opacity-reveal"
-              href="contact.html"
-              aria-label="Home Page"
-              >Contact Me</a
-            >
           </div>
+          <!--<div class="container-item rellax" data-rellax-speed="3">
+            <img src="images/max-photo.jpg">
+          </div>-->
         </div>
       </section>
 
@@ -247,8 +247,12 @@
             </p>
             <a class="button" href="releases.html">All Releases</a>
           </div>
-          <div class="container-item" data-aos="fade-up">
-            <img class="logo-svg" src="images/bleed-red-cover.jpg" />
+          <div class="container-item release-cover" data-aos="fade-up">
+            <img src="images/bleed-red-cover.jpg" />
+            <a class="release-cover-hover-text"
+              href="https://redactedbristol.bandcamp.com/album/blackbird-bleed-red-free-dl-in-bio"
+              >Soundcloud</a
+            >
           </div>
         </div>
       </section>
@@ -558,11 +562,6 @@
 
     <footer>
       <div id="footer" class="background-inverted">
-        <div class="marquee-wrap">
-          <div class="marquee">REDACTED.</div>
-          <div class="marquee">REDACTED.</div>
-          <div class="marquee">REDACTED.</div>
-        </div>
         <div class="container grid">
           <div class="container-item card">
             <div>

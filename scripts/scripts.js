@@ -113,6 +113,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+//* Rellax
+document.addEventListener("DOMContentLoaded", function () {
+  var rellax = new Rellax('.rellax');
+});
+
+
 //* Scroll Load Bar
 window.onscroll = function () {
   myFunction();
