@@ -192,7 +192,7 @@ nav .card {
 .card {
   display: flex;
   flex-direction: row;
-  grid-column: 1 / 8;
+  grid-column: 1 / 9;
 }
 
 .card img {
@@ -203,7 +203,7 @@ nav .card {
 }
 
 .card p {
-  text-wrap: nowrap;
+  text-wrap: wrap;
   margin: 0;
 }
 
@@ -939,7 +939,7 @@ a.button-inverted:hover {
 }
 
 .release-links a:hover i {
-  margin-right: var(--spacing-1);
+  padding-right: var(--spacing-1);
   max-width: 2rem;
 }
 
