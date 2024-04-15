@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@700&display=swap");
 @import url("https://db.onlinewebfonts.com/c/b71c831cd232effde30ce1bec5e171d5?family=Helvetica+73+Bold+Extended");
 
-
 html {
   scroll-behavior: smooth;
   font-size: 100%;
@@ -30,7 +29,6 @@ body {
   --font-family-head: "Helvetica 73 Bold Extended", sans-serif;
   --font-family-primary: "Rubik", sans-serif;
   --font-family-secondary: "PT Sans", sans-serif;
-
 }
 
 .light-mode {
@@ -633,6 +631,7 @@ nav.scrolled .logo img {
 
 .hero-text {
   align-self: center;
+  margin: auto;
 }
 
 .hero-text h1 {
@@ -642,6 +641,7 @@ nav.scrolled .logo img {
 
 .hero-text h1 div {
   position: relative;
+  width: fit-content;
 }
 
 .hero-text h1 span {
@@ -899,21 +899,25 @@ a.button-inverted:hover {
   margin-top: 0;
 }
 
-.release-cover:hover img {
+/*.release-cover:hover img {
   filter: blur(5px) brightness(0.7);
 }
 
 .release-cover a.release-cover-hover-text {
-  display: none;
+  visibility: hidden;
   position: absolute;
-  right: 50%;
-  transform: translateX(50%);
   bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid;
+  border-radius: 100%;
 }
 
 .release-cover:hover .release-cover-hover-text {
-  display: block;
-}
+  visibility: visible;
+}*/
 
 .skill-wrap {
   text-align: center;
@@ -956,7 +960,7 @@ a.button-inverted:hover {
   }
 
   h1 {
-    font-size: 5.5rem;
+    font-size: 2.5rem;
   }
 
   h2 {
