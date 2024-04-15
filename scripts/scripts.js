@@ -115,7 +115,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //* Rellax
 document.addEventListener("DOMContentLoaded", function () {
-  var rellax = new Rellax('.rellax');
+  var rellax = new Rellax(".rellax", {
+    speed: -1,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
+});
 });
 
 
