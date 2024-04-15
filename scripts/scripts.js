@@ -165,15 +165,3 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
   });
 });
-
-//* light mode toggle
-document.addEventListener("DOMContentLoaded", function () {
-  document
-    .getElementById("toggleDarkMode")
-    .addEventListener("click", function () {
-      document.body.classList.toggle("light-mode");
-      var icon = document.getElementById("theme-icon");
-      icon.classList.toggle("fa-sun");
-      icon.classList.toggle("fa-moon");
-    });
-});
