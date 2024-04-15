@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@700&display=swap");
-@import url("https://db.onlinewebfonts.com/c/b71c831cd232effde30ce1bec5e171d5?family=Helvetica+73+Bold+Extended");
-
 html {
   scroll-behavior: smooth;
   font-size: 100%;
@@ -26,8 +23,7 @@ body {
   --background-primary: #1d1d1c;
   --background-secondary: #f2f3f4;
   --background-opacity: rgba(0, 0, 0, 0.1);
-  --font-family-head: "Helvetica 73 Bold Extended", sans-serif;
-  --font-family-primary: "Rubik", sans-serif;
+  --font-family-primary: "Roboto Flex", sans-serif;
   --font-family-secondary: "PT Sans", sans-serif;
 }
 
@@ -77,11 +73,12 @@ h6 {
 }
 
 h1 {
-  font-family: var(--font-family-head);
+  font-family: var(--font-family-primary);
   font-size: 10vw;
+  font-stretch: 150%;
   line-height: 0.85;
   letter-spacing: 5px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h2 {
@@ -533,7 +530,7 @@ footer .container-item {
 }
 
 #lead-text .container-item:nth-child(1) {
-  grid-column: 3 / 15;
+  grid-column: 2 / 16;
 }
 
 .project img, .artist img {
@@ -580,7 +577,7 @@ footer .container-item {
   white-space: nowrap;
   transition: max-width 1s ease-in-out;
   text-transform: uppercase;
-  font-family: var(--font-family-head);
+  font-family: var(--font-family-primary);
 }
 
 nav.scrolled .logo a {
