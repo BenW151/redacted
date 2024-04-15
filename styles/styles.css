@@ -73,12 +73,11 @@ h6 {
 }
 
 h1 {
-  font-family: var(--font-family-primary);
   font-size: 10vw;
-  font-stretch: 150%;
   line-height: 0.85;
-  letter-spacing: 5px;
-  font-weight: 700;
+  letter-spacing: 8px;
+  font-stretch: 140%;
+  font-weight: 800;
 }
 
 h2 {
@@ -578,6 +577,8 @@ footer .container-item {
   transition: max-width 1s ease-in-out;
   text-transform: uppercase;
   font-family: var(--font-family-primary);
+  font-weight: 800;
+  font-stretch: 140%;
 }
 
 nav.scrolled .logo a {
@@ -656,10 +657,10 @@ nav.scrolled .logo img {
 .hero-text h1 span::after {
   content: "";
   position: absolute;
-  width: calc(100%);
-  height: 95%;
+  width: 100%;
+  height: 90%;
   transform: scaleX(0);
-  bottom: 2.5%;
+  bottom: 7%;
   left: -5px;
   background-color: var(--font-color-primary);
   transform-origin: bottom left;
