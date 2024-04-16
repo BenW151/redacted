@@ -283,7 +283,8 @@ footer .item {
   grid-column: 14 / 17;
 }
 
-#learn-more, #contact {
+#learn-more,
+#contact {
   z-index: 100;
   background-color: var(--accent-secondary);
   padding-bottom: 5rem;
@@ -354,7 +355,8 @@ footer .item {
   opacity: 0.8;
 }
 
-.definition-box p, .definition-box h4 {
+.definition-box p,
+.definition-box h4 {
   padding: 8px;
   margin: 0;
   margin-left: var(--spacing-3);
@@ -368,7 +370,8 @@ footer .item {
   width: fit-content;
 }
 
-.redacted-reveal-onscroll::before, .redacted-reveal-onscroll::before {
+.redacted-reveal-onscroll::before,
+.redacted-reveal-onscroll::before {
   content: "";
   position: absolute;
   width: calc(100% - 16px);
@@ -381,12 +384,14 @@ footer .item {
   transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 
-.redacted-reveal-onscroll.visible::before, .redacted-reveal-onscroll.visible::before {
+.redacted-reveal-onscroll.visible::before,
+.redacted-reveal-onscroll.visible::before {
   transform: scaleX(0);
   transform-origin: bottom right;
 }
 
-.redacted-reveal a::before, .redacted-reveal p::before {
+.redacted-reveal a::before,
+.redacted-reveal p::before {
   content: "";
   position: absolute;
   width: calc(100% - 16px);
@@ -411,7 +416,8 @@ footer .item {
   bottom: 0;
 }
 
-body.loaded .redacted-reveal a::before, body.loaded .redacted-reveal p::before {
+body.loaded .redacted-reveal a::before,
+body.loaded .redacted-reveal p::before {
   transform: scaleX(0);
   transform-origin: bottom right;
 }

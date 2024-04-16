@@ -121,10 +121,9 @@ document.addEventListener("DOMContentLoaded", function () {
     wrapper: null,
     round: true,
     vertical: true,
-    horizontal: false
+    horizontal: false,
+  });
 });
-});
-
 
 //* Scroll Load Bar
 window.onscroll = function () {
@@ -141,85 +140,98 @@ function myFunction() {
 }
 
 //* Text Scramble
-document.addEventListener('DOMContentLoaded', function() {
-    // Elements that should scramble on hover
-    const hoverElements = document.querySelectorAll('.scramble');
-    hoverElements.forEach(element => {
-        let originalText = element.textContent;
-        setupHoverScramble(element, originalText, 500, 10);  // Scramble time, time per character to reveal
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  // Elements that should scramble on hover
+  const hoverElements = document.querySelectorAll(".scramble");
+  hoverElements.forEach((element) => {
+    let originalText = element.textContent;
+    setupHoverScramble(element, originalText, 500, 10); // Scramble time, time per character to reveal
+  });
 
-    // Elements that should scramble once on load
-    const loadElements = document.querySelectorAll('.scramble-on-load');
-    loadElements.forEach(element => {
-        scrambleOnceOnLoad(element, 2000,10);  // Scramble time, time per character to reveal
-    });
+  // Elements that should scramble once on load
+  const loadElements = document.querySelectorAll(".scramble-on-load");
+  loadElements.forEach((element) => {
+    scrambleOnceOnLoad(element, 2000, 10); // Scramble time, time per character to reveal
+  });
 });
 
-function setupHoverScramble(element, originalText, totalDuration, charInterval) {
-    element.addEventListener('mouseenter', function() {
-        let scrambleInterval = setInterval(() => {
-            element.textContent = randomizeText(originalText.length);
-        }, 50);  // Update the scramble every 50ms
+function setupHoverScramble(
+  element,
+  originalText,
+  totalDuration,
+  charInterval
+) {
+  element.addEventListener("mouseenter", function () {
+    let scrambleInterval = setInterval(() => {
+      element.textContent = randomizeText(originalText.length);
+    }, 50); // Update the scramble every 50ms
 
-        setTimeout(() => {
-            clearInterval(scrambleInterval);  // Stop scrambling
-            revealOriginalText(element, originalText, charInterval);
-        }, totalDuration);
-    });
+    setTimeout(() => {
+      clearInterval(scrambleInterval); // Stop scrambling
+      revealOriginalText(element, originalText, charInterval);
+    }, totalDuration);
+  });
 
-    element.addEventListener('mouseleave', function() {
-        this.textContent = originalText; // Revert to original text if mouse leaves early
-    });
+  element.addEventListener("mouseleave", function () {
+    this.textContent = originalText; // Revert to original text if mouse leaves early
+  });
 }
 
 function scrambleOnceOnLoad(element, totalDuration, charInterval) {
-    let originalText = element.textContent;
-    let scrambleInterval = setInterval(() => {
-        element.textContent = randomizeText(originalText.length);
-    }, 50);  // Continuously update the scramble
+  let originalText = element.textContent;
+  let scrambleInterval = setInterval(() => {
+    element.textContent = randomizeText(originalText.length);
+  }, 50); // Continuously update the scramble
 
-    setTimeout(() => {
-        clearInterval(scrambleInterval);  // Stop scrambling
-        revealOriginalText(element, originalText, charInterval);
-    }, totalDuration);
+  setTimeout(() => {
+    clearInterval(scrambleInterval); // Stop scrambling
+    revealOriginalText(element, originalText, charInterval);
+  }, totalDuration);
 }
 
 function revealOriginalText(element, originalText, charInterval) {
-    for (let i = 0; i < originalText.length; i++) {
-        setTimeout(() => {
-            element.textContent = element.textContent.substring(0, i) + originalText.charAt(i) + element.textContent.substring(i + 1);
-        }, i * charInterval);
-    }
+  for (let i = 0; i < originalText.length; i++) {
+    setTimeout(() => {
+      element.textContent =
+        element.textContent.substring(0, i) +
+        originalText.charAt(i) +
+        element.textContent.substring(i + 1);
+    }, i * charInterval);
+  }
 }
 
 function randomizeText(length) {
-    let result = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    const charactersLength = characters.length;
+  let result = "";
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const charactersLength = characters.length;
 
-    for (let i = 0; i < length; i++) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
 
-    return result;
+  return result;
 }
 
 //* Unredact on Scroll
-document.addEventListener("DOMContentLoaded", function() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      } else {
-        entry.target.classList.remove('visible');
-      }
-    });
-  }, {
-    threshold: 0.8
-  });
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.8,
+    }
+  );
 
-  const elements = document.querySelectorAll('.redacted-reveal-onscroll, footer');
-  elements.forEach(el => observer.observe(el));
+  const elements = document.querySelectorAll(
+    ".redacted-reveal-onscroll, footer"
+  );
+  elements.forEach((el) => observer.observe(el));
 });
-
