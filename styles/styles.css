@@ -217,7 +217,7 @@ nav .card {
 }
 
 .card p {
-  text-wrap: wrap;
+  white-space: wrap;
   margin: 0;
 }
 
@@ -257,7 +257,7 @@ nav .contact {
 
 footer .item {
   overflow: visible;
-  text-wrap: nowrap;
+  white-space: nowrap;
   padding: 0;
 }
 
@@ -446,7 +446,7 @@ footer .container,
 }
 
 footer .grid {
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 #footer {
