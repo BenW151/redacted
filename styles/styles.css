@@ -201,6 +201,7 @@ footer .contact {
 
 nav .card {
   display: none;
+  white-space: wrap;
 }
 
 .card {
