@@ -120,7 +120,7 @@ li {
 }
 
 .imperfections {
-  filter: invert(100%) brightness(0.4);
+  filter: invert(100%) brightness(0.3);
   position: absolute;
   width: 100vw;
   height: 100vh;
