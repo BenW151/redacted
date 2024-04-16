@@ -396,7 +396,7 @@ footer .item {
   left: 8px;
   background-color: var(--font-color-primary);
   transform-origin: bottom right;
-  transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1) 2s;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1) 2s;
 }
 
 .redacted-reveal a.button::before {
@@ -437,6 +437,10 @@ footer .container,
 
 footer .grid {
   text-wrap: nowrap;
+}
+
+#footer {
+  overflow: hidden;
 }
 
 #releases .item:nth-child(1) {
