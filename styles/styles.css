@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 100%;
+  background-color: var(--background-primary);
 }
 
 html,
@@ -23,9 +24,9 @@ body {
   --background-primary: #1d1d1c;
   --background-secondary: #f2f3f4;
   --background-opacity: rgba(0, 0, 0, 0.1);
+  --font-family-head: "Roboto Flex", sans-serif;
   --font-family-primary: "Roboto Mono", sans-serif;
   --font-family-secondary: "PT Sans", sans-serif;
-  --font-family-head: "Roboto Flex", sans-serif;
 }
 
 * {
@@ -118,13 +119,25 @@ li {
   padding: var(--spacing-2);
 }
 
+.imperfections {
+  filter: invert(100%) brightness(0.4);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.imperfections.rotate {
+  rotate: 180deg;
+}
+
 .container {
   position: relative;
   width: 100%;
   padding: 15vh 5vw;
   justify-content: center;
   margin: 0 auto;
-  background-color: var(--accent-secondary);
+  overflow: hidden;
 }
 
 .item {
@@ -154,6 +167,10 @@ li {
 .contact a {
   padding-top: 0;
   padding-bottom: var(--spacing-1);
+}
+
+footer p {
+  font-weight: 400;
 }
 
 footer .socials {
