@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Title Tag -->
-    <title>Ben Ward - Web Development</title>
+    <title>Redacted</title>
 
     <!-- Meta Description -->
     <meta
@@ -54,10 +54,7 @@
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet" />
 
     <!-- JavaScript Files -->
@@ -69,6 +66,9 @@
     <!--AOS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!--Rellax-->
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
 
     <!-- Social Media Meta Tags -->
     <meta
@@ -82,55 +82,54 @@
       content="https://www.yourwebsite.com/images/social-preview.png" />
     <meta property="og:url" content="https://www.yourwebsite.com/" />
     <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- Add any additional tags specific to your website's needs here -->
   </head>
 
   <body>
     <nav>
-      <button
-        class="button button-inverted dark-mode-button"
-        id="toggleDarkMode"
-        aria-label="Home Page">
-        <i id="theme-icon" class="fa-solid fa-sun"></i>
-      </button>
       <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
       </div>
       <h2 class="logo hover-underline">
-        <a href="index.html" aria-label="Home Page">Ben Ward</a>
-        <img class="logo-svg" src="images/bw-logo.svg" alt="BW Logo" />
+        <a href="index.html" aria-label="Home Page">Redacted</a>
+        <img
+          class="logo-svg"
+          src="images/redacted-logo.png"
+          alt="Redacted Logo" />
       </h2>
       <div class="burger-menu"></div>
       <div class="navigation-items hover-underline">
-        <a class="navigation-item" href="index.html" aria-label="Home Page"
+        <a
+          class="navigation-item scramble"
+          href="index.html"
+          aria-label="Home Page"
           >Home</a
         >
         <a
-          class="navigation-item"
-          href="index.html#about"
+          class="navigation-item scramble"
+          href="#releases"
           aria-label="Home Page"
-          >About</a
+          >Releases</a
         >
         <a
-          class="navigation-item"
-          href="index.html#skills"
+          class="navigation-item scramble"
+          href="#artists"
           aria-label="Home Page"
-          >Skills</a
+          >Artists</a
         >
         <a
-          class="navigation-item"
-          href="index.html#services"
+          class="navigation-item scramble"
+          href="#events"
           aria-label="Home Page"
-          >Services</a
+          >Events</a
         >
+        <a class="navigation-item scramble" href="#news" aria-label="Home Page"
+          >News</a
+        >
+
         <a
-          class="navigation-item"
-          href="index.html#projects"
+          class="navigation-item scramble active"
+          href="contact.html"
           aria-label="Home Page"
-          >Projects</a
-        >
-        <a class="navigation-item active" href="#contact" aria-label="Home Page"
           >Contact</a
         >
         <div class="contact hover-underline">
@@ -143,15 +142,19 @@
             >
           </div>
         </div>
-        <div class="container-item card">
+        <div class="item card">
           <div>
-            <img class="logo-svg" src="images/bw-logo.svg" alt="BW Logo" />
+            <img
+              class="logo-svg"
+              src="images/redacted-logo.png"
+              alt="Redacted Logo" />
           </div>
           <div>
-            <p class="name">Ben Ward</p>
-            <p class="role">Web Developer</p>
+            <p class="name">Redacted</p>
+            <p class="role">Bristol, UK | HCMC, Vietnam</p>
             <p class="italic">
-              Dedicated to finding the perfect solution for you.
+              Representing experimentation within all forms of Bass music from
+              all walks of people.
             </p>
           </div>
         </div>
@@ -161,26 +164,18 @@
     <main>
       <section id="hero">
         <div class="container grid hero contact-hero">
-          <div class="hero-text container-item">
-            <div class="text-mask">
-              <h1 class="reveal">Contact</h1>
-            </div>
-            <div class="text-mask">
-              <p class="reveal italic contact-quote">
-                Looking for the perfect solution to fit your needs? Reach out
-                and let me help you navigate your options.
+          <div class="hero-text item">
+            <h1 class="scramble-on-load">Contact</h1>
+            <div class="redacted-reveal">
+              <p class="italic contact-quote" style="position: relative;">
+                Interested in collaborating? Have questions? Contact us.
               </p>
+              <a class="button scramble" style="position: relative;" href="#contact" aria-label="Home Page"
+                >Get In Touch</a
+              >
             </div>
-            <a
-              class="button opacity-reveal"
-              href="#contact"
-              aria-label="Home Page"
-              >Get In Touch</a
-            >
           </div>
-          <div
-            class="container-item contact hover-underline opacity-reveal"
-            style="transition-delay: 2s">
+          <div class="item contact hover-underline redacted-reveal">
             <a href="mailto:myemail@gmail.com" aria-label="Home Page"
               >myemail@gmail.com</a
             >
@@ -188,26 +183,30 @@
               >+447000 000000</a
             >
           </div>
-          <div
-            class="container-item socials hover-underline opacity-reveal"
-            style="transition-delay: 2s">
+          <div class="item socials hover-underline redacted-reveal">
             <a
-              href="https://github.com/BenW151"
-              aria-label="Ben Ward Github"
+              href="https://soundcloud.com/redactedbristol"
+              aria-label="Redated soundcloud"
               target="_blank"
-              >GitHub</a
+              >SoundCloud</a
             >
             <a
-              href="https://github.com/BenW151"
-              aria-label="Ben Ward linkedin"
+              href="https://redactedbristol.bandcamp.com/music"
+              aria-label="Redacted bandcamp"
               target="_blank"
-              >LinkedIn</a
+              >Bandcamp</a
             >
             <a
-              href="https://github.com/BenW151"
-              aria-label="Ben Ward linkedin"
+              href="https://www.instagram.com/redactedbristol"
+              aria-label="Reacted Instagram"
               target="_blank"
               >Instagram</a
+            >
+            <a
+              href="https://facebook.com/redactedbristol"
+              aria-label="Redacted facebook"
+              target="_blank"
+              >Facebook</a
             >
           </div>
         </div>
@@ -215,13 +214,14 @@
 
       <section id="contact">
         <div class="container grid">
-          <div class="container-item">
+          <div class="item">
             <h2>Get In Touch</h2>
             <div class="fcf-body">
               <div id="fcf-form">
                 <form
-                  action="https://formspree.io/f/xdoqplga"
+                  action="https://formspree.io/f/xwkgwgdg"
                   method="POST"
+                  enctype="multipart/form-data"
                   autocomplete="on"
                   class="contact-form">
                   <label class="form-name">
@@ -240,11 +240,11 @@
                       placeholder="Email"
                       required />
                   </label>
-                  <label class="form-project">
+                  <label class="form-title">
                     <input
                       type="text"
-                      name="project-title"
-                      placeholder="Project Title"
+                      name="title"
+                      placeholder="Title"
                       required />
                   </label>
                   <label class="form-message">
@@ -261,87 +261,69 @@
               </div>
             </div>
           </div>
-          <!--<div class="contact-items">
-              <h4>Email</h4>
-              <a href="mailto:myemail@gmail.com" aria-label="Home Page"
-                >myemail@gmail.com</a
-              >
-              <h4>Phone</h4>
-              <a href="tel:+447000000000" aria-label="Home Page"
-                >+447000 000000</a
-              >
-              <h4>LinkedIn</h4>
-              <a
-                href="https://www.linkedin.com/in/ben-ward-5523ab15a/"
-                target="_blank"
-                aria-label="Home Page"
-                >linkedin.com/in/BenW151</a
-              >
-            </div>-->
         </div>
       </section>
     </main>
 
     <footer>
-      <div id="footer" class="background-inverted">
-        <div class="marquee-wrap">
-          <div class="marquee">Get In Touch.</div>
-          <div class="marquee">Get In Touch.</div>
-          <div class="marquee">Get In Touch.</div>
-        </div>
-        <div class="container grid nowrap">
-          <div class="container-item card">
+      <div id="footer">
+        <div class="container grid">
+          <div class="item card">
             <div>
               <img
                 class="logo-svg"
-                src="images/bw-logo-inverted.svg"
+                src="images/redacted-logo.png"
                 alt="team member 1" />
             </div>
             <div>
-              <p class="name">Ben Ward</p>
-              <p class="role">Web Developer</p>
+              <p class="name">Redacted</p>
+              <p class="role">Bristol, UK | HCMC, Vietnam</p>
               <p class="italic">
-                Dedicated to finding the perfect solution for you.
+                Representing experimentation within all forms of Bass music from
+                all walks of people.
               </p>
             </div>
           </div>
 
-          <div class="container-item contact hover-underline">
+          <div class="item contact hover-underline">
             <a href="mailto:myemail@gmail.com" aria-label="Home Page"
-              >myemail@gmail.com</a
+              >redactedbristol@gmail.com</a
             >
-            <a
-              href="tel:+447000000000"
-              aria-label="Home Page"
-              style="text-wrap: nowrap"
+            <a href="tel:+447000000000" aria-label="Home Page"
               >+447000 000000</a
             >
           </div>
 
-          <div class="container-item socials hover-underline">
+          <div class="item socials hover-underline">
             <a
-              href="https://github.com/BenW151"
-              aria-label="Ben Ward Github"
+              href="https://soundcloud.com/redactedbristol"
+              aria-label="Redated soundcloud"
               target="_blank"
-              >GitHub</a
+              >SoundCloud</a
             >
             <a
-              href="https://github.com/BenW151"
-              aria-label="Ben Ward linkedin"
+              href="https://redactedbristol.bandcamp.com/music"
+              aria-label="Redacted bandcamp"
               target="_blank"
-              >LinkedIn</a
+              >Bandcamp</a
             >
             <a
-              href="https://github.com/BenW151"
-              aria-label="Ben Ward linkedin"
+              href="https://www.instagram.com/redactedbristol"
+              aria-label="Reacted Instagram"
               target="_blank"
               >Instagram</a
+            >
+            <a
+              href="https://facebook.com/redactedbristol"
+              aria-label="Redacted facebook"
+              target="_blank"
+              >Facebook</a
             >
           </div>
         </div>
 
         <div class="container grid footer-end hover-underline">
-          <p class="item">Copyright ©2024</p>
+          <p class="item">Copyright ©2019</p>
           <a
             class="item"
             href="https://github.com/BenW151"
