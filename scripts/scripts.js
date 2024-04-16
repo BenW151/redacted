@@ -165,3 +165,47 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
   });
 });
+
+//* Text Scramble
+document.addEventListener('DOMContentLoaded', function() {
+  const elements = document.querySelectorAll('.scramble');
+
+  elements.forEach(element => {
+      let originalText = element.textContent;
+      let running;  // To keep track of the interval for scrambling
+      let timeout;  // To manage the delay before reverting to the original text
+
+      element.addEventListener('mouseenter', function() {
+          running = setInterval(() => {
+              this.textContent = randomizeText(originalText.length);
+          }, 50);
+
+          // Clear any existing timeout to handle rapid re-hovering
+          clearTimeout(timeout);
+
+          // Set a timeout to revert to the original text after 1 second
+          timeout = setTimeout(() => {
+              clearInterval(running);
+              this.textContent = originalText;
+          }, 500);  // Revert after 1 second
+      });
+
+      element.addEventListener('mouseleave', function() {
+          clearInterval(running); // Stop scrambling
+          clearTimeout(timeout); // Ensure we don't revert late
+          this.textContent = originalText;  // Immediately revert to original text
+      });
+  });
+
+  function randomizeText(length) {
+      let result = '';
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      const charactersLength = characters.length;
+
+      for (let i = 0; i < length; i++) {
+          result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      }
+
+      return result;
+  }
+});
