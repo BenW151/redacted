@@ -845,10 +845,6 @@ nav {
   left: 23vw;
 }
 
-#contact .index-counter {
-  left: -10px;
-}
-
 .light-mode .logo-svg {
   filter: invert(100%);
 }
