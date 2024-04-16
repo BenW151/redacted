@@ -497,15 +497,6 @@ footer .grid {
   padding-top: 0;
 }
 
-#about .item:nth-child(4) {
-  grid-column: 11 / 14;
-  grid-row-start: 1;
-}
-
-#about .item:nth-child(5) {
-  grid-column: 13 / 17;
-  grid-row-start: 2;
-}
 
 #skills .item:nth-child(1) {
   grid-column: 1 / 7;
@@ -534,7 +525,8 @@ footer .grid {
 }
 
 .release img,
-.artist img, .news img {
+.artist img,
+.news img {
   margin-left: var(--spacing-3);
   margin-right: var(--spacing-3);
   height: 20vw;
@@ -556,7 +548,8 @@ footer .grid {
 
 .author,
 .release,
-.artist, .news {
+.artist,
+.news {
   display: flex;
 }
 
@@ -894,18 +887,18 @@ a.button-inverted:hover {
   height: 90%;
 }
 
-.release-links {
+.links {
   display: flex;
   flex-direction: column;
 }
 
-.release-links i {
+.links i {
   max-width: 0;
   overflow: hidden;
   font-size: 0.75rem;
 }
 
-.release-links a:hover i {
+.links a:hover i {
   padding-right: var(--spacing-1);
   max-width: 2rem;
 }
@@ -1170,12 +1163,14 @@ a.button-inverted:hover {
   }
 
   .release,
-  .artist, .news {
+  .artist,
+  .news {
     flex-direction: column;
   }
 
   .release img,
-  .artist img, .news img {
+  .artist img,
+  .news img {
     width: 90%;
     height: 90%;
     margin: auto;
