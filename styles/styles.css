@@ -435,6 +435,10 @@ body.loaded .redacted-reveal p::before {
   }
 }
 
+#learn-more .button {
+  margin-top: var(--spacing-3);
+}
+
 footer .container,
 #learn-more .container {
   padding-bottom: var(--spacing-5);
