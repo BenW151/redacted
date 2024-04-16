@@ -1272,6 +1272,7 @@ a.button-inverted:hover {
 
   .footer-end .item:nth-child(1) {
     grid-column: 1 / 5;
+    margin-bottom: 0;
   }
 
   .footer-end .item:nth-child(2) {
