@@ -429,23 +429,23 @@ footer .grid {
 }
 
 #releases .item:nth-child(1) {
-  grid-column: 1 / 6;
+  grid-column: 1 / 17;
   grid-row-start: 1;
 }
 
 #releases .item:nth-child(2) {
-  grid-column: 6 / 17;
-  grid-row-start: 1;
-}
-
-#releases .item:nth-child(3) {
-  grid-column: 6 / 17;
+  grid-column: 1 / 17;
   grid-row-start: 2;
 }
 
-#releases .item:nth-child(4) {
-  grid-column: 6 / 17;
+#releases .item:nth-child(3) {
+  grid-column: 1 / 17;
   grid-row-start: 3;
+}
+
+#releases .item:nth-child(4) {
+  grid-column: 1 / 17;
+  grid-row-start: 4;
 }
 
 #latest-release .item:nth-child(1) {
@@ -895,7 +895,7 @@ a.button {
   justify-content: center;
   display: flex;
   padding: var(--spacing-1) 0;
-  width: 8rem;
+  width: 10vw;
   text-align: center;
   align-items: center;
 }
@@ -985,7 +985,7 @@ a.button-inverted:hover {
     --spacing-3: 4.6vw;
     --spacing-4: 5vw;
     --spacing-5: 7vw;
-    --font-size-hero: 15vw;
+    --font-size-hero: 11vw;
     --font-size-head: 7vw;
     --font-size-subhead: 6vw;
     --font-size-subsubhead: 5vw;
@@ -1021,6 +1021,10 @@ a.button-inverted:hover {
   button {
     font-size: var(--font-size-regular);
     margin-right: auto;
+  }
+
+  a.button, button {
+    width: 40vw;
   }
 
   .logo {
@@ -1169,7 +1173,7 @@ a.button-inverted:hover {
 
   .navigation-items a {
     display: flex;
-    font-size: calc(0.75* var(--font-size-hero));
+    font-size: var(--font-size-hero);
     margin: 0;
     margin-right: auto;
     margin-left: var(--spacing-4);
